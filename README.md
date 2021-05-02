@@ -7,7 +7,7 @@
 - If using gmail , create a password for your gmail account using this:-  https://support.google.com/accounts/answer/185833?hl=en&authuser=1
 - node app.js & (To run this as a background process)
 
-# ADD Your custom person to be tracked
+# Create your custom  obj that can track a list of districts using district_id
 ```
 let person = {
           districts : [314], // district_id (How to fetch ? mentioned in the code)
