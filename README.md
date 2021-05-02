@@ -15,3 +15,4 @@ let person = {
         }
 ```
 
+![alt text](https://github.com/Nit-1997/cowin-slot-notifier/blob/main/screen.png?raw=true)
