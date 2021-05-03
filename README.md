@@ -1,10 +1,10 @@
 # How to use
 
-- install nodejs 
-- npm install
-- create .env file and add required details
-- Add values for EMAIL , PASS env variables these are the credentials of the gmail account you want to use to send email
-- If using gmail , create a password for your gmail account using this:-  https://support.google.com/accounts/answer/185833?hl=en&authuser=1
+- install nodejs on your system 
+- In the terminal type ```npm install```
+- create .env file and add required details (sample provided below)
+- EMAIL and PASS are the credentials of a bot gmail account that you will use to send emails
+- Create a hash password for your bot gmail account using this , plain text passwords won't work :-  https://support.google.com/accounts/answer/185833?hl=en&authuser=1
 - node app.js & (To run this as a background process)
 
 # sample .env file format
