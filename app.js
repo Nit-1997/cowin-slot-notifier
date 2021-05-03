@@ -113,38 +113,6 @@ let notify = async(person , slotDetails)=>{
 let checkSlots = async(person,date)=>{
    try{
     
-
-    //find state id 
-    // let config = {
-    //     method: 'get',
-    //     url: 'https://cdn-api.co-vin.in/api/v2/admin/location/states',
-    //     headers: {
-    //         'accept': 'application/json',
-    //         'Accept-Language': 'hi_IN'
-    //     }
-    // };
-
-    //UP - 34  , Delhi - 9 , WB - 36 , Bihar - 5 , maharashtra - 21  , meghalaya -23 , karnataka - 16 , MP - 20 jk 14
-
-
-    //find district id 
-    // let config = {
-    //     method: 'get',
-    //     url: 'https://cdn-api.co-vin.in/api/v2/admin/location/districts/14',
-    //     headers: {
-    //         'accept': 'application/json',
-    //         'Accept-Language': 'hi_IN'
-    //     }
-    // };
-
-    //Noida - 650 , Ghaziabad - 651 , east-delhi - 145 , hooghly - 720 ,Kolkata - 725 , howrah - 721 ,north24 - 730, banglore-urban - 265 , bbmp - 294
-    //Indore - 314 jammu-230
-
-    // response = await axios(config)
-    // console.log(response.data)
-
-    //use the above 2 configs to find your state_id then district_id and then add the district_id to the tracking ones
-
     for(i = 0 ; i < person.districts.length ; i++ ) {
        let config = {
           method: 'get',
@@ -195,7 +163,7 @@ let main = async()=>{
     try {
 
         let person = {
-          districts : [720,725,721,730],
+          districts : [720,730,725,721],
           email : process.env.PERSON, // email of the person
           age : 18 //minimum tracking age
         }
