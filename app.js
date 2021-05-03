@@ -194,47 +194,14 @@ let checkAvailability = async(person)=>{
 let main = async()=>{
     try {
 
-        let sarkar = {
+        let person = {
           districts : [720,725,721,730],
-          email : process.env.SARKAR,
-          age : 45
-        }
-
-        
-        let nitin = {
-          districts : [650,651,145],
-          email : process.env.NITIN,
-          age : 18
-        }
-
-        
-        let rishit = {
-          districts : [265,294],
-          email : process.env.RISHIT,
-          age : 18
-        }
-        
-        
-        let tuvi = {
-          districts : [265,294],
-          email : process.env.TUVI,
-          age : 18
-        }
-
-        let utkarsh = {
-          districts : [230],
-          email : process.env.UTKARSH,
-          age : 18
-        }
-
-        let tanishq = {
-          districts : [314],
-          email : process.env.TANISHQ,
-          age : 18
+          email : process.env.PERSON, // email of the person
+          age : 18 //minimum tracking age
         }
 
        cron.schedule('*/1 * * * *', async () => {
-             checkAvailability(nitin)
+             checkAvailability(person)
        });
     } catch (e) {
         console.log('an error occured: ' + JSON.stringify(e, null, 2));
