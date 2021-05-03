@@ -4,7 +4,7 @@
 - In the terminal type ```npm install```
 - create .env file and add required details (sample provided below)
 - EMAIL and PASS are the credentials of a bot gmail account that you will use to send emails
-- Create a hash password for your bot gmail account using this , plain text passwords won't work :-  https://support.google.com/accounts/answer/185833?hl=en&authuser=1
+- Create a hash password for your bot gmail account using this :- https://support.google.com/accounts/answer/185833?hl=en&authuser=1 (plain text passwords won't work)
 - node app.js & (To run this as a background process)
 
 # sample .env file format
