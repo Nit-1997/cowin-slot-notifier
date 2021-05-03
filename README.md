@@ -20,7 +20,7 @@ PERSON="abc@gmail.com"
 # Create your custom  obj that can track a list of districts using district_id
 ```
 let person = {
-          districts : [314], // to find your target district ids open sample.html
+          districts : [314], // to find your target district ids open https://nit-1997.github.io/cowin-slot-notifier/
           email : process.env.PERSON, //from .env file
           age : 18 //min age
         }
@@ -28,5 +28,5 @@ let person = {
 
 ![alt text](https://github.com/Nit-1997/cowin-slot-notifier/blob/main/screen.png?raw=true)
 
-# How to Find district ID added (open sample.html to map your target districts)
+# How to Find district ID added (open https://nit-1997.github.io/cowin-slot-notifier/ to map your target districts)
 ![alt text](https://github.com/Nit-1997/cowin-slot-notifier/blob/main/district.png?raw=true)
