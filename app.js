@@ -1,7 +1,6 @@
 var  nodemailer     = require("nodemailer")
    , axios          = require("axios")
    , moment         = require("moment")
-   , data           = require("./data")
    , fs             = require('fs').promises
    , cron = require('node-cron')
 
@@ -104,7 +103,7 @@ let notify = async(person , slotDetails)=>{
        console.log(info)
     }catch(error){
        console.log(error)
-   //    throw error   
+       throw error   
     }
  
 }
@@ -133,7 +132,7 @@ let checkSlots = async(person,date)=>{
      }  
    }catch(error){
        console.log(error)
-   //    throw error
+       throw error
    }
 }
 
@@ -171,9 +170,9 @@ let main = async()=>{
        cron.schedule('*/1 * * * *', async () => {
              checkAvailability(person)
        });
-    } catch (e) {
+    } catch (error) {
         console.log('an error occured: ' + JSON.stringify(e, null, 2));
-       // throw e
+        throw error
     }
 }
 
