@@ -118,7 +118,8 @@ let checkSlots = async(person,date)=>{
           url: 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id='+person.districts[i]+'&date='+date,
           headers: {
               'accept': 'application/json',
-              'Accept-Language': 'hi_IN'
+              'Accept-Language': 'hi_IN',
+              'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36'
           }
         }
 
@@ -162,9 +163,9 @@ let main = async()=>{
     try {
 
         let person = {
-          districts : [720,730,725,721],
+          districts : [650,145,651],
           email : process.env.PERSON, // email of the person
-          age : 18 //minimum tracking age
+          age : 45 //minimum tracking age
         }
 
        cron.schedule('*/1 * * * *', async () => {
