@@ -1,3 +1,5 @@
+This script helps you track vaccine slots in your district and send you notification on your email once slot opens up.
+
 # How to use
 
 - install nodejs on your system 
