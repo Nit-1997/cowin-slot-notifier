@@ -1,7 +1,6 @@
 var  nodemailer     = require("nodemailer")
    , axios          = require("axios")
    , moment         = require("moment")
-   , fs             = require('fs').promises
    , cron = require('node-cron')
 
 
@@ -80,7 +79,7 @@ let notify = async(person , slotDetails)=>{
 
         `
 
-        await fs.writeFile('body.html', html)
+        const buff = Buffer.from(html, "utf-8");
 
         let transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -97,7 +96,7 @@ let notify = async(person , slotDetails)=>{
             to: person.email, // list of receivers
             subject:'Vaccine slot available', // Subject line
             text: 'For clients with plaintext support only',
-            html: await fs.readFile('body.html'),
+            html: buff,
           });
 
        console.log(info)
